@@ -24,19 +24,19 @@ class QuestionTag
      *
      * @ORM\JoinColumn(nullable=false)
      */
-    private $question;
+    private ?\App\Entity\Question $question = null;
 
     /**
      * @ORM\ManyToOne(targetEntity=Tag::class)
      *
      * @ORM\JoinColumn(nullable=false)
      */
-    private $tag;
+    private ?\App\Entity\Tag $tag = null;
 
     /**
      * @ORM\Column(type="datetime_immutable")
      */
-    private $taggedAt;
+    private \DateTimeImmutable $taggedAt;
 
     public function __construct()
     {

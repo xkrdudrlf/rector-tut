@@ -25,7 +25,7 @@ class Tag
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private ?string $name = null;
 
     public function getId(): ?int
     {

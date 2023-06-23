@@ -28,39 +28,34 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
-    private $email;
+    private ?string $email = null;
 
     /**
      * @ORM\Column(type="json")
      */
-    private $roles = [];
+    private array $roles = [];
 
     /**
-     * @var string The hashed password
-     *
      * @ORM\Column(type="string")
      */
-    private $password;
+    private ?string $password = null;
 
-    /**
-     * @var string Non-mapped field
-     */
-    private $plainPassword;
+    private ?string $plainPassword = null;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $firstName;
+    private ?string $firstName = null;
 
     /**
      * @ORM\OneToMany(targetEntity=Question::class, mappedBy="owner")
      */
-    private $questions;
+    private Collection|array $questions;
 
     /**
      * @ORM\Column(type="boolean")
      */
-    private $isVerified = false;
+    private bool $isVerified = false;
 
     public function __construct()
     {

@@ -8,17 +8,8 @@ use Symfony\Contracts\Cache\CacheInterface;
 
 class MarkdownHelper
 {
-    private $markdownParser;
-    private $cache;
-    private $isDebug;
-    private $logger;
-
-    public function __construct(MarkdownParserInterface $markdownParser, CacheInterface $cache, bool $isDebug, LoggerInterface $mdLogger)
+    public function __construct(private MarkdownParserInterface $markdownParser, private CacheInterface $cache, private bool $isDebug, private LoggerInterface $logger)
     {
-        $this->markdownParser = $markdownParser;
-        $this->cache = $cache;
-        $this->isDebug = $isDebug;
-        $this->logger = $mdLogger;
     }
 
     public function parse(string $source): string
@@ -31,8 +22,6 @@ class MarkdownHelper
             return $this->markdownParser->transformMarkdown($source);
         }
 
-        return $this->cache->get('markdown_'.md5($source), function () use ($source) {
-            return $this->markdownParser->transformMarkdown($source);
-        });
+        return $this->cache->get('markdown_'.md5($source), fn() => $this->markdownParser->transformMarkdown($source));
     }
 }

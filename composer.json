@@ -4,7 +4,7 @@
     "name": "symfonycasts/symfony6_upgrade",
     "description": "Upgrade to Symfony 6 course code",
     "require": {
-        "php": "^7.4.0 || ^8.0.0",
+        "php": "^8.0.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "babdev/pagerfanta-bundle": "^2.0",
@@ -22,7 +22,7 @@
         "symfony/asset": "5.4.*",
         "symfony/console": "5.4.*",
         "symfony/dotenv": "5.4.*",
-        "symfony/flex": "^1.3.1",
+        "symfony/flex": "^2.1",
         "symfony/form": "5.4.*",
         "symfony/framework-bundle": "5.4.*",
         "symfony/monolog-bundle": "^3.0",
@@ -59,7 +59,9 @@
             "*": "dist"
         },
         "sort-packages": true,
-        "platform": {},
+        "platform": {
+            "php": "8.0.2"
+        },
         "allow-plugins": {
             "symfony/flex": true,
             "php-http/discovery": true,

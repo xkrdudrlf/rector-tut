@@ -29,48 +29,48 @@ class Question
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private ?string $name = null;
 
     /**
      * @ORM\Column(type="string", length=100, unique=true)
      *
      * @Gedmo\Slug(fields={"name"})
      */
-    private $slug;
+    private ?string $slug = null;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $question;
+    private ?string $question = null;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $askedAt;
+    private ?\DateTimeInterface $askedAt = null;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $votes = 0;
+    private int $votes = 0;
 
     /**
      * @ORM\OneToMany(targetEntity=Answer::class, mappedBy="question", fetch="EXTRA_LAZY")
      *
      * @ORM\OrderBy({"createdAt" = "DESC"})
      */
-    private $answers;
+    private Collection|array $answers;
 
     /**
      * @ORM\OneToMany(targetEntity=QuestionTag::class, mappedBy="question")
      */
-    private $questionTags;
+    private Collection|array $questionTags;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="questions")
      *
      * @ORM\JoinColumn(nullable=false)
      */
-    private $owner;
+    private ?\App\Entity\User $owner = null;
 
     public function __construct()
     {

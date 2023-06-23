@@ -28,29 +28,29 @@ class Answer
     /**
      * @ORM\Column(type="text")
      */
-    private $content;
+    private ?string $content = null;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $username;
+    private ?string $username = null;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $votes = 0;
+    private int $votes = 0;
 
     /**
      * @ORM\ManyToOne(targetEntity=Question::class, inversedBy="answers")
      *
      * @ORM\JoinColumn(nullable=false)
      */
-    private $question;
+    private ?\App\Entity\Question $question = null;
 
     /**
      * @ORM\Column(type="string", length=15)
      */
-    private $status = self::STATUS_NEEDS_APPROVAL;
+    private string $status = self::STATUS_NEEDS_APPROVAL;
 
     public function getId(): ?int
     {
