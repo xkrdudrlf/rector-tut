@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "fb86ea91ea62dcb7",
+    "type": "split",
+    "children": [
+      {
+        "id": "6af93f12459666d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18265e4899fae252",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Upgrade to Symfony 6.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "020fdd4750fc914b",
+    "type": "split",
+    "children": [
+      {
+        "id": "19ccab43643781c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "224d668edb96222c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "543d6dc5a300b667",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "736ead700d9d31ad",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 217.5
+  },
+  "right": {
+    "id": "a53543e5e1a0446d",
+    "type": "split",
+    "children": [
+      {
+        "id": "863faae5d9fc811e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f1b53d667ff31415",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Upgrade to Symfony 6.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aa12bb48d870536e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Upgrade to Symfony 6.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "162c765dfac4bb1a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1806fcb8f8393e5f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Upgrade to Symfony 6.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "18265e4899fae252",
+  "lastOpenFiles": [
+    "Pasted image 20230626144603.png",
+    "Pasted image 20230626142440.png",
+    "Pasted image 20230626142414.png",
+    "Upgrade to Symfony 6.md",
+    "Untitled.md"
+  ]
+}

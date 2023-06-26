@@ -74,7 +74,7 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
         return new RedirectResponse($this->urlGenerator->generate('app_homepage'));
     }
 
-    public function onAuthenticationFailure(Request $request, AuthenticationException $exception): Response
+    public function onAuthenticationFailure(Request $request, AuthenticationException $exception): ?Response
     {
         if ($exception instanceof AccountNotVerifiedAuthenticationException) {
             $targetUrl = $this->urlGenerator->generate('app_verify_resend_email');

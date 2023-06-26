@@ -1,3 +1,8 @@
+# Upgrade to Symfony 6
+## Update '_composer.json_'
+
+
+
 ## [ Chapter 13 - Custom Authenticator authenticate() ]
 
 For LoginFormAuthenticator.php,
