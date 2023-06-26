@@ -13,6 +13,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 class RandomSpellCommand extends Command
 {
     protected static $defaultName = 'app:random-spell';
+
     protected static $defaultDescription = 'Cast a random spell!';
 
     public function __construct(private LoggerInterface $logger)

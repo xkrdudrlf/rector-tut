@@ -5,37 +5,23 @@ namespace App\Entity;
 use App\Repository\QuestionTagRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=QuestionTagRepository::class)
- */
+#[ORM\Entity(repositoryClass: QuestionTagRepository::class)]
 class QuestionTag
 {
-    /**
-     * @ORM\Id
-     *
-     * @ORM\GeneratedValue
-     *
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column()]
+    private ?int $id;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Question::class, inversedBy="questionTags")
-     *
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private ?\App\Entity\Question $question = null;
+    #[ORM\ManyToOne(inversedBy: 'questionTags')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Question $question = null;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Tag::class)
-     *
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private ?\App\Entity\Tag $tag = null;
+    #[ORM\ManyToOne()]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Tag $tag = null;
 
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
+    #[ORM\Column()]
     private \DateTimeImmutable $taggedAt;
 
     public function __construct()

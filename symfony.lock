@@ -155,9 +155,6 @@
     "ocramius/package-versions": {
         "version": "1.4.2"
     },
-    "pagerfanta/pagerfanta": {
-        "version": "v2.7.2"
-    },
     "phar-io/manifest": {
         "version": "2.0.3"
     },
@@ -500,9 +497,6 @@
     "symfony/polyfill-mbstring": {
         "version": "v1.13.1"
     },
-    "symfony/polyfill-php73": {
-        "version": "v1.13.1"
-    },
     "symfony/polyfill-php80": {
         "version": "v1.22.1"
     },
@@ -562,9 +556,6 @@
         "version": "v5.0.7"
     },
     "symfony/security-csrf": {
-        "version": "v5.0.11"
-    },
-    "symfony/security-guard": {
         "version": "v5.0.11"
     },
     "symfony/security-http": {

@@ -22,6 +22,6 @@ class MarkdownHelper
             return $this->markdownParser->transformMarkdown($source);
         }
 
-        return $this->cache->get('markdown_'.md5($source), fn() => $this->markdownParser->transformMarkdown($source));
+        return $this->cache->get('markdown_'.md5($source), fn () => $this->markdownParser->transformMarkdown($source));
     }
 }

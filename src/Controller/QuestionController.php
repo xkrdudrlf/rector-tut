@@ -20,9 +20,7 @@ class QuestionController extends AbstractController
     {
     }
 
-    /**
-     * @Route("/{page<\d+>}", name="app_homepage")
-     */
+    #[Route(path: '/{page<\d+>}', name: 'app_homepage')]
     public function homepage(QuestionRepository $repository, int $page = 1): Response
     {
         $queryBuilder = $repository->createAskedOrderedByNewestQueryBuilder();
@@ -36,19 +34,14 @@ class QuestionController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/questions/new")
-     *
-     * @IsGranted("ROLE_USER")
-     */
+    #[Route(path: '/questions/new')]
+    #[IsGranted('ROLE_USER')]
     public function new()
     {
         return new Response('Sounds like a GREAT feature for V2!');
     }
 
-    /**
-     * @Route("/questions/{slug}", name="app_question_show")
-     */
+    #[Route(path: '/questions/{slug}', name: 'app_question_show')]
     public function show(Question $question): Response
     {
         if ($this->isDebug) {
@@ -60,9 +53,7 @@ class QuestionController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/questions/edit/{slug}", name="app_question_edit")
-     */
+    #[Route(path: '/questions/edit/{slug}', name: 'app_question_edit')]
     public function edit(Question $question): Response
     {
         $this->denyAccessUnlessGranted('EDIT', $question);
@@ -72,9 +63,7 @@ class QuestionController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/questions/{slug}/vote", name="app_question_vote", methods="POST")
-     */
+    #[Route(path: '/questions/{slug}/vote', name: 'app_question_vote', methods: 'POST')]
     public function questionVote(Question $question, Request $request, EntityManagerInterface $entityManager): \Symfony\Component\HttpFoundation\RedirectResponse
     {
         $direction = $request->request->get('direction');

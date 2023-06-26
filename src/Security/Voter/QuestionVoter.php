@@ -38,6 +38,7 @@ class QuestionVoter extends Voter
         if ($this->security->isGranted('ROLE_ADMIN')) {
             return true;
         }
+
         return match ($attribute) {
             'EDIT' => $user === $subject->getOwner(),
             default => false,
